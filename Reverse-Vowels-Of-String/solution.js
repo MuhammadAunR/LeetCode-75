@@ -6,7 +6,9 @@ var reverseVowels = function (s) {
 
     // Constraints
     if (s.length < 1 || s.length > (3 * 10 ** 5)) {
-        return 'Array lenght must be greater than or equals to 1 or less than or equals to 3 * 10 ** 5'
+        return 'String length must be greater than or equals to 1 or less than or equals to 3 * 10 ** 5'
+    } if (!/^[\x20-\x7E]*$/.test(s)) {
+        return "String consists of printable ASCII characters only"
     }
 
     const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
